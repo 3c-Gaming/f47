@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo ODDS PILHADAS - Acesso Liberado</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="Vagas abertas para a ODDS PILHADAS. Acesso VIP Exclusivo com Thiago Asmar (Pilhado).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: 'hsl(260 30% 7%)',
+            foreground: 'hsl(0 0% 98%)',
+            card: 'hsl(260 28% 11%)',
+            primary: 'hsl(262 83% 58%)',
+            'primary-foreground': 'hsl(0 0% 100%)',
+            muted: 'hsl(260 22% 17%)',
+            'muted-foreground': 'hsl(260 15% 72%)',
+            accent: 'hsl(40 97% 55%)',
+            'accent-foreground': 'hsl(260 30% 7%)',
+            border: 'hsl(260 25% 20%)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { border-color: hsl(260 25% 20%); }
+    body { font-family: 'Inter', sans-serif; }
+
+    @keyframes slide-in {
+      0% { transform: translateX(100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slide-out {
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(100%); opacity: 0; }
+    }
+    .animate-slide-in { animation: slide-in 0.5s ease-out forwards; }
+    .animate-slide-out { animation: slide-out 0.5s ease-out forwards; }
+
+    @keyframes pulse-slow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 hsl(262 83% 58% / 0.5); }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px 10px hsl(262 83% 58% / 0.5); }
+    }
+    .animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
+  </style>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+
+  <!-- Urgency Bar -->
+  <div class="bg-primary py-2 md:py-3 px-3 md:px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-8">
+      <!-- Timer -->
+      <div class="flex items-center gap-1">
+        <div class="flex flex-col items-center">
+          <div class="bg-card border-2 border-primary/30 rounded-lg px-2 md:px-3 py-1 md:py-2 min-w-[45px] md:min-w-[60px] text-center">
+            <span id="timer-min" class="text-xl md:text-2xl font-bold text-white tabular-nums">06</span>
+          </div>
+          <span class="text-[10px] md:text-xs text-white mt-1 uppercase tracking-wider">Minutos</span>
+        </div>
+        <span class="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-5">:</span>
+        <div class="flex flex-col items-center">
+          <div class="bg-card border-2 border-primary/30 rounded-lg px-2 md:px-3 py-1 md:py-2 min-w-[45px] md:min-w-[60px] text-center">
+            <span id="timer-sec" class="text-xl md:text-2xl font-bold text-white tabular-nums">55</span>
+          </div>
+          <span class="text-[10px] md:text-xs text-white mt-1 uppercase tracking-wider">Segundos</span>
+        </div>
+      </div>
+      <div class="flex flex-col items-center sm:items-start">
+        <span class="text-white font-bold text-sm md:text-xl tracking-wide">98% DAS VAGAS ESGOTADAS!</span>
+        <span class="bg-white text-primary px-2 md:px-3 py-0.5 md:py-1 rounded text-xs md:text-sm font-bold mt-1">ÚLTIMAS 03 DISPONÍVEIS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative w-full overflow-hidden bg-background">
+    <!-- Mobile -->
+    <div class="block md:hidden">
+      <div class="flex flex-wrap items-center justify-center gap-2 py-2 px-4 bg-background">
+        <span class="bg-accent text-accent-foreground font-bold text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wide">Acesso VIP Exclusivo</span>
+        <div class="flex items-center gap-1 text-muted-foreground text-[10px]">
+          <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>+685k</span>
+        </div>
+        <div class="flex items-center gap-0.5">
+          <svg class="w-2.5 h-2.5 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="w-2.5 h-2.5 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="w-2.5 h-2.5 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="w-2.5 h-2.5 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="w-2.5 h-2.5 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+      <div class="relative w-full">
+        <img src="mobile-odds-pilhadas.jpeg" alt="Thiago Asmar - ODDS PILHADAS" class="w-full h-[38vh] object-cover object-top">
+      </div>
+      <div class="px-4 py-3 text-center bg-background">
+        <div class="mb-3">
+          <h1 class="font-black text-2xl tracking-tight leading-none">
+            <span class="block text-foreground">VAGAS ABERTAS</span>
+            <span class="block"><span class="text-foreground">PARA A </span><span class="text-primary font-black">ODDS PILHADAS ⚡</span></span>
+          </h1>
+        </div>
+        <p class="text-muted-foreground text-sm mb-4 max-w-sm mx-auto leading-snug">
+          <span class="text-primary font-bold">Thiago Asmar</span> mais conhecido como <span class="text-primary font-bold">Pilhado</span>, maior apostador do Brasil, enviando análises diárias para entrar com pouco e buscar retornos <span class="text-foreground font-bold">GIGANTES</span>.
+        </p>
+        <button onclick="goWhatsApp()" class="w-full bg-primary hover:bg-primary/90 text-white font-bold text-sm px-6 py-4 rounded-full shadow-lg shadow-primary/30 inline-flex items-center justify-center animate-pulse-slow cursor-pointer">
+          <svg class="mr-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          GARANTIR MINHA VAGA
+          <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <div class="mt-2 flex flex-wrap items-center justify-center gap-2 text-muted-foreground text-[10px]">
+          <div class="flex items-center gap-1"><svg class="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Entrada gratuita</span></div>
+          <div class="flex items-center gap-1"><svg class="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Acesso imediato</span></div>
+          <div class="flex items-center gap-1"><svg class="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Sem compromisso</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="hidden md:block relative h-[80vh] min-h-[600px]">
+      <img src="desktop-odds-pilhadas.jpeg" alt="Thiago Asmar - ODDS PILHADAS" class="absolute inset-0 w-full h-full object-cover object-top">
+      <div class="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute inset-0 z-20 flex items-center">
+        <div class="container mx-auto px-8">
+          <div class="max-w-2xl">
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+              <span class="bg-accent text-accent-foreground font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wide">Acesso VIP Exclusivo</span>
+              <div class="flex items-center gap-2 text-muted-foreground text-sm">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>+685k</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <svg class="w-4 h-4 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+            </div>
+            <div class="mb-6">
+              <h1 class="font-black text-6xl lg:text-7xl tracking-tight leading-none">
+                <span class="block text-foreground">VAGAS ABERTAS</span>
+                <span class="block"><span class="text-foreground">PARA A </span><span class="text-primary font-black">ODDS PILHADAS ⚡</span></span>
+              </h1>
+            </div>
+            <p class="text-muted-foreground text-xl mb-10 max-w-lg">
+              <span class="text-primary font-bold">Thiago Asmar</span> mais conhecido como <span class="text-primary font-bold">Pilhado</span>, maior apostador do Brasil, enviando análises diárias para entrar com pouco e buscar retornos <span class="text-foreground font-bold">GIGANTES</span>.
+            </p>
+            <button onclick="goWhatsApp()" class="bg-primary hover:bg-primary/90 text-white font-bold text-xl px-12 py-8 rounded-full shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/40 inline-flex items-center animate-pulse-slow cursor-pointer">
+              <svg class="mr-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              GARANTIR MINHA VAGA
+              <svg class="ml-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <div class="mt-8 flex flex-wrap items-center gap-6 text-muted-foreground text-base">
+              <div class="flex items-center gap-2"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Entrada gratuita</span></div>
+              <div class="flex items-center gap-2"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Acesso imediato</span></div>
+              <div class="flex items-center gap-2"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Sem compromisso</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-card py-8 px-4 border-t border-border">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-muted-foreground">2026 &copy; Todos os direitos reservados</p>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 text-muted-foreground">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full border border-muted-foreground">
+              <span class="text-xs font-bold">18+</span>
+            </div>
+            <div class="text-xs">
+              <p class="flex items-center gap-1">
+                <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Jogue com responsabilidade
+              </p>
+              <p>Não é investimento</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-sm text-muted-foreground">
+          <a href="https://policy-pal-simple.lovable.app" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">Política de privacidade</a>
+          <span>|</span>
+          <a href="https://policy-pal-simple.lovable.app" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">Termos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Social Proof Notification -->
+  <div id="social-proof" class="fixed bottom-4 left-4 z-50 hidden">
+    <div class="bg-white text-gray-900 px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 max-w-[320px]">
+      <svg class="w-5 h-5 flex-shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      <span id="social-proof-text" class="text-sm font-medium"></span>
+      <button onclick="closeSocialProof()" class="ml-auto hover:opacity-70 transition-opacity text-gray-500">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // ==================== CONFIG ====================
+    var DESTINATIONS = [{ phone: "5511955023876", flowId: "6a5789d47f1ef4508e06f366", weight: 100 }];
+    var TEXT = "Quero entrar no grupo odds pilhadas";
+    var FUNIL = "f47";
+    // ================================================
+
+    // Countdown Timer
+    (function() {
+      var min = 6, sec = 55;
+      var elMin = document.getElementById('timer-min');
+      var elSec = document.getElementById('timer-sec');
+      setInterval(function() {
+        if (sec > 0) { sec--; }
+        else if (min > 0) { min--; sec = 59; }
+        else { min = 6; sec = 55; }
+        elMin.textContent = String(min).padStart(2, '0');
+        elSec.textContent = String(sec).padStart(2, '0');
+      }, 1000);
+    })();
+
+    // Social Proof
+    (function() {
+      var names = ["André Costa","Lucas Silva","Marcos Oliveira","Pedro Santos","Rafael Souza","João Pereira","Carlos Lima","Bruno Almeida","Felipe Rodrigues","Gustavo Ferreira","Thiago Martins","Diego Carvalho","Matheus Ribeiro","Leonardo Gomes","Vinicius Araújo"];
+      var el = document.getElementById('social-proof');
+      var textEl = document.getElementById('social-proof-text');
+
+      function show() {
+        var name = names[Math.floor(Math.random() * names.length)];
+        textEl.textContent = name + ' entrou no grupo ODDS PILHADAS ⚡';
+        el.className = 'fixed bottom-4 left-4 z-50 animate-slide-in';
+        setTimeout(function() { el.className = 'fixed bottom-4 left-4 z-50 animate-slide-out'; }, 2000);
+      }
+
+      setTimeout(function() {
+        show();
+        setInterval(show, 10000);
+      }, 3000);
+    })();
+
+    function closeSocialProof() {
+      document.getElementById('social-proof').className = 'fixed bottom-4 left-4 z-50 animate-slide-out';
+    }
+
+    // WhatsApp Tracking
+    function buildLeadId() {
+      var uuid;
+      if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+        uuid = crypto.randomUUID();
+      } else {
+        uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0;
+          return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+      }
+      var parts = new Intl.DateTimeFormat('pt-BR', {
+        timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit',
+        hour: '2-digit', minute: '2-digit', hour12: false
+      }).formatToParts(new Date());
+      var get = function(type) {
+        var p = parts.find(function(p) { return p.type === type; });
+        return p ? p.value : '00';
+      };
+      return get('day') + '-' + get('month') + '-' + get('hour') + '-' + get('minute') + '-' + FUNIL + '-pilhado-' + uuid;
+    }
+
+    function pickDestination() {
+      var rand = Math.random() * 100, acc = 0;
+      for (var i = 0; i < DESTINATIONS.length; i++) {
+        acc += DESTINATIONS[i].weight;
+        if (rand < acc) return DESTINATIONS[i];
+      }
+      return DESTINATIONS[DESTINATIONS.length - 1];
+    }
+
+    function goWhatsApp() {
+      var dest = pickDestination();
+      var lead_id = buildLeadId();
+      var cookies = document.cookie.split('; ');
+      var fbpCookie = cookies.find(function(r) { return r.startsWith('_fbp='); });
+      var fbp = fbpCookie ? fbpCookie.split('=')[1] : '';
+      var params = new URLSearchParams(window.location.search);
+      var fbclid = params.get('fbclid') || '';
+      var fbc = fbclid ? 'fb.1.' + Date.now() + '.' + fbclid : '';
+      var utm_source = params.get('utm_source') || '';
+      var utm_medium = params.get('utm_medium') || '';
+      var utm_campaign = params.get('utm_campaign') || '';
+      var utm_content = params.get('utm_content') || '';
+
+      navigator.sendBeacon(
+        'https://tracking-edge-ingest.3cgg.workers.dev/postback/landing?token=2dd0db8ca21b96cc2f11424e90a41d509d5166f88301db7a',
+        JSON.stringify({ event: 'lead', lead_id: lead_id, fbc: fbc, fbp: fbp, fbclid: fbclid })
+      );
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'cta_click', lead_id: lead_id });
+
+      var e = encodeURIComponent;
+      window.location.href =
+        'https://wa.pulse.is/' + e(dest.phone) +
+        '?start=' + e(dest.flowId) +
+        '&phone=' + e(dest.phone) +
+        '&text=' + e(TEXT) +
+        '&lead_id=' + e(lead_id) +
+        '&fbp=' + e(fbp) +
+        '&fbc=' + e(fbc) +
+        '&fbclid=' + e(fbclid) +
+        '&utm_source=' + e(utm_source) +
+        '&utm_medium=' + e(utm_medium) +
+        '&utm_campaign=' + e(utm_campaign) +
+        '&utm_content=' + e(utm_content);
+    }
+  </script>
+</body>
+</html>
